@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy-deep: #040810;
+  --navy-deep: #030509;
 
   --navy: #0c1428;
   --navy-raised: #101b33;
@@ -30,7 +30,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #040810;
+  background: #030509;
   color: var(--silver);
   line-height: 1.6;
   font-weight: 300;
@@ -157,12 +157,12 @@ body {
 section { position: relative; z-index: 1; }
 .band { padding: 96px 0; border-top: 1px solid var(--hairline); }
 .eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.28em;
+  font-size: 0.95rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--blue-soft);
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-weight: 600;
+  margin-bottom: 26px;
   display: block;
 }
 .band h2 {
@@ -216,11 +216,11 @@ section { position: relative; z-index: 1; }
 /* TWO COLUMN is/is-not */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 20px; }
 .split h3 {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--blue-soft);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--hairline-bright);
@@ -288,8 +288,8 @@ footer {
   color: var(--steel);
   font-weight: 500;
 }
-.footer-sig .ns { color: var(--silver); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.25s ease, color 0.25s ease; }
-.footer-sig a.ns:hover { color: var(--white); border-bottom-color: var(--blue-glow); }
+.footer-sig .ns { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--blue-soft); padding-bottom: 2px; transition: border-color 0.25s ease, color 0.25s ease; }
+.footer-sig a.ns:hover { color: var(--white); border-bottom-color: var(--white); }
 .footer-ns { font-size: 0.74rem; color: rgba(138,151,173,0.5); margin-top: 18px; letter-spacing: 0.16em; text-transform: uppercase; }
 
 @media (max-width: 720px) {
