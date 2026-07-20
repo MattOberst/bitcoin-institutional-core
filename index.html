@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bitcoin Institutional Core &mdash; InstitutionalCore.com</title>
 <link rel="icon" type="image/png" href="bitcoin-institutional-core-logo.png">
-<meta name="description" content="Bitcoin Institutional Core &mdash; a premium institutional namespace asset and five-layer semantic control architecture. A Namespace Capital asset.">
+<meta name="description" content="Bitcoin Institutional Core &mdash; a premium institutional namespace asset and five-layer semantic control architecture. A NameSpace Capital asset.">
 <meta property="og:title" content="Bitcoin Institutional Core">
 <meta property="og:description" content="A premium institutional namespace asset for the structured Bitcoin era.">
 <meta property="og:type" content="website">
@@ -15,7 +15,6 @@
 <style>
 :root {
   --navy-deep: #030509;
-
   --navy: #0c1428;
   --navy-raised: #101b33;
   --steel: #8a97ad;
@@ -56,7 +55,7 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 82vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,11 +79,7 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 78% 80% at 50% 47%, #000 60%, transparent 90%);
   mask-image: radial-gradient(ellipse 78% 80% at 50% 47%, #000 60%, transparent 90%);
 }
-.logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+.logo img { width: 100%; height: auto; display: block; }
 .hero h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -144,8 +139,7 @@ body {
 .layer-strip span:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -2px;
-  top: 50%;
+  right: -2px; top: 50%;
   transform: translateY(-50%);
   width: 3px; height: 3px;
   border-radius: 50%;
@@ -213,7 +207,7 @@ section { position: relative; z-index: 1; }
 }
 .layer-body p { color: var(--steel); font-size: 1.02rem; max-width: 620px; }
 
-/* TWO COLUMN is/is-not */
+/* TWO COLUMN */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 20px; }
 .split h3 {
   font-size: 0.95rem;
@@ -269,13 +263,7 @@ footer {
   position: relative;
   z-index: 1;
 }
-.footer-domain {
-  font-weight: 500;
-  color: var(--silver);
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
-  font-size: 1.02rem;
-}
+.footer-domain { font-weight: 500; color: var(--silver); letter-spacing: 0.04em; margin-bottom: 10px; font-size: 1.02rem; }
 .footer-ref { font-size: 0.86rem; color: var(--steel); letter-spacing: 0.02em; }
 .footer-sig {
   margin-top: 26px;
@@ -294,7 +282,7 @@ footer {
 
 @media (max-width: 720px) {
   .wrap { padding: 0 22px; }
-  .hero { padding: 64px 22px 56px; min-height: 88vh; }
+  .hero { padding: 64px 22px 56px; min-height: 80vh; }
   .logo { width: 92%; max-width: 400px; margin-bottom: 40px; }
   .band { padding: 68px 0; }
   .layer { grid-template-columns: 1fr; gap: 8px; padding: 26px 0; }
@@ -332,6 +320,48 @@ footer {
   margin: 0 auto;
   letter-spacing: 0.01em;
 }
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  text-decoration: none;
+  animation: fade-in 2s ease 1.5s both;
+}
+.scroll-indicator span {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(138,151,173,0.45);
+  font-weight: 500;
+}
+.scroll-chevron {
+  width: 18px;
+  height: 18px;
+  border-right: 1.5px solid rgba(61,123,255,0.55);
+  border-bottom: 1.5px solid rgba(61,123,255,0.55);
+  transform: rotate(45deg);
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.55; }
+  50%       { transform: rotate(45deg) translateY(5px); opacity: 1; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-chevron { animation: none; }
+  .scroll-indicator { animation: none; }
+}
 </style>
 </head>
 <body>
@@ -345,12 +375,16 @@ footer {
     <div class="domain-primary">InstitutionalCore.com</div>
     <div class="domain-secondary">Formal asset reference: BitcoinInstitutionalCore.com</div>
   </div>
+  <a href="#thesis" class="scroll-indicator" aria-label="Scroll down">
+    <span>Scroll</span>
+    <div class="scroll-chevron"></div>
+  </a>
 </header>
 
 <main>
 
 <!-- THE THESIS -->
-<section class="band">
+<section class="band" id="thesis">
   <div class="wrap">
     <span class="eyebrow">The Thesis</span>
     <h2>A concentrated institutional namespace position for Bitcoin.</h2>
