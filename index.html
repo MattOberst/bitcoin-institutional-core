@@ -1247,10 +1247,139 @@ footer {
   transform: translateY(-1px);
 }
 
+/* === CONSTITUTIONAL VOCABULARY ============================================= */
+.core-vocab {
+  margin-top: 40px;
+  padding: 32px 30px;
+  border: 1px solid var(--hairline-bright);
+  border-radius: 3px;
+  background: var(--navy-mid);
+}
+.core-vocab-headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 10px 0 14px;
+}
+.core-vocab-intro {
+  font-size: 0.88rem;
+  color: var(--steel);
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+.core-vocab-grid { border-top: 1px solid var(--hairline); }
+.core-vocab-layer {
+  display: flex;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--hairline);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.core-vocab-label {
+  font-size: 0.72rem;
+  color: var(--blue-soft);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  min-width: 240px;
+  flex-shrink: 0;
+}
+.core-vocab-concepts {
+  font-size: 0.87rem;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+}
+.core-vocab-close {
+  margin-top: 16px;
+  font-size: 0.83rem;
+  color: var(--steel);
+  font-style: italic;
+}
+
+/* === BITCOINCLARITY.AI CALLOUT ============================================= */
+.clarity-callout {
+  margin-top: 32px;
+  padding: 26px 28px;
+  border: 1px solid var(--blue-border-mid);
+  border-left: 2px solid var(--blue-glow);
+  border-radius: 0 3px 3px 0;
+  background: var(--blue-dim);
+}
+.clarity-callout-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--blue-soft);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+.clarity-callout-domain {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--white);
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.clarity-callout-headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--silver);
+  display: block;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.clarity-callout-body {
+  font-size: 0.88rem;
+  color: var(--silver);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.clarity-callout-rels-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--steel);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+.clarity-callout-rels {
+  font-size: 0.85rem;
+  color: var(--blue-soft);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+.clarity-callout-regulatory {
+  font-size: 0.82rem;
+  color: var(--steel);
+  line-height: 1.6;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline);
+  margin-bottom: 10px;
+}
+.clarity-callout-scope {
+  font-size: 0.78rem;
+  color: var(--steel);
+  font-style: italic;
+  padding-top: 10px;
+  border-top: 1px solid var(--hairline);
+}
+
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 860px) {
   .nav-wrap { padding: 0 28px; }
   .nav-links { display: none; }
+  .core-vocab-label { min-width: 180px; }
+  .core-vocab-layer { gap: 12px; }
   .wrap { padding: 0 28px; }
   .hero { padding: 72px 28px 68px; }
   .logo { max-width: 480px; margin-bottom: 44px; }
@@ -1328,6 +1457,8 @@ footer {
   .core-close-strip { flex-wrap: wrap; gap: 8px; justify-content: center; }
   .demo-tagline { gap: 12px; }
   .inquiry-email { font-size: 0.94rem; word-break: break-all; }
+  .core-vocab-label { min-width: unset; width: 100%; }
+  .core-vocab-layer { flex-direction: column; gap: 4px; }
 }
 </style>
 </head>
@@ -1344,7 +1475,7 @@ footer {
       <a href="#demonstrator" role="listitem">Demonstrator</a>
       <a href="#inquiry" role="listitem">Inquiry</a>
     </div>
-    <a href="mailto:info@namespacecapital.ai?subject=Institutional%20Architecture%20Demonstrator%20-%20Access%20Request" class="nav-request">Request Access</a>
+    <a href="mailto:institutionalcore@namespacecapital.com?subject=Institutional%20Architecture%20Demonstrator%20-%20Access%20Request" class="nav-request">Request Access</a>
   </div>
 </nav>
 
@@ -1498,41 +1629,41 @@ footer {
       <div class="core-layer">
         <span class="core-layer-num">I</span>
         <span class="core-layer-keyword">Authority</span>
-        <span class="core-layer-title">Governance &amp; Controls</span>
-        <p class="core-layer-desc">Governance, policy, authority, identity, permission, risk, audit, and control.</p>
-        <p class="core-layer-q">Who may act, under what authority, and within what constraints?</p>
+        <span class="core-layer-title">Authority and Permission</span>
+        <p class="core-layer-desc">Defines the institutional authority conditions under which Bitcoin-related activity may be governed, permitted, constrained, reviewed, and attributed.</p>
+        <p class="core-layer-q">Who has authority, under what mandate, and subject to what controls?</p>
       </div>
 
       <div class="core-layer">
         <span class="core-layer-num">II</span>
         <span class="core-layer-keyword">Structure</span>
-        <span class="core-layer-title">Infrastructure Core</span>
-        <p class="core-layer-desc">Structural and architectural concepts through which Bitcoin systems may be institutionally framed, verified, organized, and understood.</p>
-        <p class="core-layer-q">What is the system, how is it structured, and how can its state be understood?</p>
+        <span class="core-layer-title">Structural and Architectural Definition</span>
+        <p class="core-layer-desc">Defines the structural concepts through which Bitcoin infrastructure, verification, settlement, ledger state, and network participation may be described and organized institutionally.</p>
+        <p class="core-layer-q">What is the system, how is it structured, and what establishes its state?</p>
       </div>
 
       <div class="core-layer">
         <span class="core-layer-num">III</span>
         <span class="core-layer-keyword">Custody</span>
-        <span class="core-layer-title">Security, Trust &amp; Custody</span>
-        <p class="core-layer-desc">Safeguarding, custody, protection, trust, insurance, and security concepts required for institutional defensibility.</p>
-        <p class="core-layer-q">How are assets, systems, and institutional responsibilities protected?</p>
+        <span class="core-layer-title">Custody, Security, and Trust</span>
+        <p class="core-layer-desc">Defines the safeguarding, security, protection, and risk-transfer concepts through which institutional control of Bitcoin may be made more legible.</p>
+        <p class="core-layer-q">How are assets, access, and institutional trust protected?</p>
       </div>
 
       <div class="core-layer">
         <span class="core-layer-num">IV</span>
         <span class="core-layer-keyword">Insight</span>
-        <span class="core-layer-title">Analytics &amp; Intelligence</span>
-        <p class="core-layer-desc">Interpretive concepts through which Bitcoin-related information may become institutionally legible, comparable, explainable, and decision-relevant.</p>
-        <p class="core-layer-q">How does raw information become institutional understanding?</p>
+        <span class="core-layer-title">Interpretive Clarity</span>
+        <p class="core-layer-desc">Defines the interpretive concepts through which Bitcoin-related information, policy environments, reporting requirements, and market structures may become institutionally legible, explainable, and decision-relevant.</p>
+        <p class="core-layer-q">How does complex Bitcoin information become coherent institutional understanding?</p>
       </div>
 
       <div class="core-layer">
         <span class="core-layer-num">V</span>
         <span class="core-layer-keyword">Liquidity</span>
-        <span class="core-layer-title">Financial Rails &amp; Market Reference</span>
-        <p class="core-layer-desc">Concepts through which liquidity, settlement, financial interaction, and institutional market reference may be framed.</p>
-        <p class="core-layer-q">How does institutional Bitcoin connect to financial movement, exposure, and reference?</p>
+        <span class="core-layer-title">Liquidity and Exposure Reference</span>
+        <p class="core-layer-desc">Defines reference concepts through which institutional Bitcoin exposure, liquidity, indexing, and market participation may be framed and understood.</p>
+        <p class="core-layer-q">How are exposure, liquidity, and market reference understood institutionally?</p>
       </div>
 
     </div>
@@ -1543,6 +1674,36 @@ footer {
       <span>Custody</span>
       <span>Insight</span>
       <span>Liquidity</span>
+    </div>
+
+    <!-- Constitutional Vocabulary -->
+    <div class="core-vocab">
+      <span class="eyebrow">The Constitutional Vocabulary</span>
+      <h3 class="core-vocab-headline">Seventeen concepts. One institutional spine.</h3>
+      <p class="core-vocab-intro">The Constitutional Core concentrates seventeen foundational naming concepts across five institutional layers. These surfaces define the architecture's primary vocabulary without attempting to represent every possible Bitcoin function.</p>
+      <div class="core-vocab-grid">
+        <div class="core-vocab-layer">
+          <span class="core-vocab-label">I &mdash; Authority and Permission</span>
+          <span class="core-vocab-concepts">Governance &middot; Policy &middot; Risk &middot; Audit &middot; Identity</span>
+        </div>
+        <div class="core-vocab-layer">
+          <span class="core-vocab-label">II &mdash; Structural and Architectural Definition</span>
+          <span class="core-vocab-concepts">Ledger &middot; Chain &middot; Verification &middot; Settlement &middot; Node</span>
+        </div>
+        <div class="core-vocab-layer">
+          <span class="core-vocab-label">III &mdash; Custody, Security, and Trust</span>
+          <span class="core-vocab-concepts">Custody &middot; Security &middot; Insurance</span>
+        </div>
+        <div class="core-vocab-layer">
+          <span class="core-vocab-label">IV &mdash; Interpretive Clarity</span>
+          <span class="core-vocab-concepts">Insight &middot; Clarity</span>
+        </div>
+        <div class="core-vocab-layer">
+          <span class="core-vocab-label">V &mdash; Liquidity and Exposure Reference</span>
+          <span class="core-vocab-concepts">Index &middot; Liquidity</span>
+        </div>
+      </div>
+      <p class="core-vocab-close">The Core is intentionally concentrated. Broader specialization, adjacency, and naming depth are expressed through Full BIIS.</p>
     </div>
 
   </div>
@@ -1561,6 +1722,9 @@ footer {
     </p>
     <p class="lede">
       The Bitcoin Institutional Infrastructure Stack extends beyond the seventeen Core surfaces to organize a broader set of Bitcoin-related institutional concepts across eight architectural layers.
+    </p>
+    <p class="lede">
+      The five-layer Constitutional Core and the eight-layer Full-BIIS architecture are complementary organizational views rather than interchangeable taxonomies. A Constitutional Core surface may therefore occupy a different functional position when viewed within the broader eight-layer BIIS architecture without changing its constitutional role.
     </p>
 
     <div class="biis-layers">
@@ -1752,7 +1916,7 @@ footer {
 
       <div class="concentration-attr">
         <span class="concentration-attr-name">Cross-Layer Coherence</span>
-        <p class="concentration-attr-desc">Governance, infrastructure, security, intelligence, financial, market, automation, and production concepts can be understood as parts of the same institutional system.</p>
+        <p class="concentration-attr-desc">Governance, infrastructure, security, intelligence, financial, market, automation, and production concepts can be understood as parts of the same institutional system. The relationship of Clarity to Policy, Risk, Audit, and Insight illustrates how individual Core surfaces can gain additional meaning through architectural relationship rather than isolated naming value.</p>
       </div>
 
       <div class="concentration-attr">
@@ -1785,7 +1949,7 @@ footer {
 <section class="band-compact" id="namespace">
   <div class="wrap">
     <span class="eyebrow">Namespace Architecture</span>
-    <h2>Core surfaces. Architectural anchors. AI-native positions. Supplemental companions.</h2>
+    <h2>Core surfaces. Architectural anchors. .ai naming surfaces. Supplemental companions.</h2>
     <p class="lede">
       The architecture extends beyond a single extension or naming convention. Different namespace positions may perform different strategic roles.
     </p>
@@ -1801,13 +1965,13 @@ footer {
       <div class="ns-item">
         <span class="ns-type">Constitutional Core .ai</span>
         <span class="ns-role">Concentrated Institutional Spine</span>
-        <p class="ns-desc">Seventeen selected AI-native naming surfaces representing the architecture's most concentrated institutional concepts.</p>
+        <p class="ns-desc">Seventeen selected .ai naming surfaces representing the architecture's most concentrated institutional concepts.</p>
       </div>
 
       <div class="ns-item">
         <span class="ns-type">Full-BIIS .ai Surfaces</span>
-        <span class="ns-role">Expanded Institutional Vocabulary</span>
-        <p class="ns-desc">Sixty-three controlled AI-native naming surfaces extending the architecture across eight institutional layers.</p>
+        <span class="ns-role">Primary Naming Surfaces</span>
+        <p class="ns-desc">The 63 .ai naming surfaces form the primary semantic layer of Full BIIS, including the 17-surface Constitutional Core. They provide controlled naming territory across institutional Bitcoin concepts and may support future human-facing, machine-readable, AI-oriented, or agent-accessible deployment models without implying that any such implementation currently exists.</p>
       </div>
 
       <div class="ns-item">
@@ -1866,6 +2030,17 @@ footer {
       <p>
         The technologies may change. The need for coherent institutional concepts does not disappear. <strong>A naming surface can remain human-readable while becoming increasingly machine-addressable.</strong>
       </p>
+    </div>
+
+    <div class="clarity-callout">
+      <span class="clarity-callout-eyebrow">Constitutional Core &middot; Layer IV</span>
+      <span class="clarity-callout-domain">BitcoinClarity.ai</span>
+      <span class="clarity-callout-headline">Institutional clarity as an architectural function.</span>
+      <p class="clarity-callout-body">BitcoinClarity.ai occupies a constitutional position within Layer IV &mdash; Interpretive Clarity. It defines dedicated naming territory around institutional clarity across regulatory, policy, reporting, and market-structure interpretation. As institutional Bitcoin frameworks continue to evolve, the surface provides a durable semantic position for a concept increasingly central to institutional understanding.</p>
+      <span class="clarity-callout-rels-label">Canonical Relationships</span>
+      <p class="clarity-callout-rels">Policy &middot; Risk &middot; Audit &middot; Insight</p>
+      <p class="clarity-callout-regulatory">The growing emphasis on regulatory and market-structure clarity within the U.S. digital-asset environment illustrates the increasing institutional relevance of this concept. BitcoinClarity.ai is independently controlled within the BIIS Constitutional Core and is not affiliated with, endorsed by, or connected to any legislation, government body, regulator, or public institution.</p>
+      <p class="clarity-callout-scope">Architectural naming territory only. No regulatory, legal, compliance, reporting, research, or advisory service is provided.</p>
     </div>
 
   </div>
@@ -1941,7 +2116,7 @@ footer {
       </p>
 
       <div>
-        <a href="mailto:info@namespacecapital.ai?subject=Institutional%20Architecture%20Demonstrator%20-%20Access%20Request"
+        <a href="mailto:institutionalcore@namespacecapital.com?subject=Institutional%20Architecture%20Demonstrator%20-%20Access%20Request"
            class="cta-request"
            aria-label="Request access to the Institutional Architecture Demonstrator">
           Request Demonstrator Access ›
@@ -2029,7 +2204,7 @@ footer {
           <li>A coordination framework</li>
           <li>A collection of independently controllable naming surfaces</li>
           <li>A system for organizing institutional concepts</li>
-          <li>A platform for potential future branding, routing, documentation, development, or integration</li>
+          <li>A controlled namespace architecture supporting potential future branding, routing, documentation, development, integration, and machine-readable deployment.</li>
           <li>A strategic NameSpace Capital asset</li>
         </ul>
       </div>
@@ -2063,7 +2238,10 @@ footer {
     <span class="eyebrow">Strategic Optionality</span>
     <h2>One architecture. Multiple deployment paths.</h2>
     <p class="lede">
-      The current architecture demonstrates one coherent institutional interpretation of the controlled namespace while preserving substantial strategic optionality for an acquirer. Individual naming surfaces may potentially be independently branded, organized, routed, developed, integrated, deployed, or held strategically — while remaining available for coordinated use across a broader institutional namespace.
+      Control of the coordinated namespace creates multiple forms of strategic optionality. Individual naming surfaces may potentially be branded, organized, routed, documented, developed, integrated, deployed as informational or machine-readable destinations, or held strategically within a broader institutional architecture.
+    </p>
+    <p class="lede">
+      These possibilities describe future deployment optionality. They do not represent claims that the underlying commercial, technical, financial, regulatory, or operational functions are presently being performed.
     </p>
 
     <div class="acquisition-options">
@@ -2107,11 +2285,11 @@ footer {
       </ul>
 
       <div class="inquiry-action">
-        <a href="mailto:info@namespacecapital.ai?subject=InstitutionalCore.com%20-%20Strategic%20Inquiry" class="inquiry-cta">
+        <a href="mailto:institutionalcore@namespacecapital.com?subject=InstitutionalCore.com%20-%20Strategic%20Inquiry" class="inquiry-cta">
           Begin a Strategic Discussion ›
         </a>
-        <a class="inquiry-email" href="mailto:info@namespacecapital.ai?subject=InstitutionalCore.com%20-%20Strategic%20Inquiry">
-          info@namespacecapital.ai
+        <a class="inquiry-email" href="mailto:institutionalcore@namespacecapital.com?subject=InstitutionalCore.com%20-%20Strategic%20Inquiry">
+          institutionalcore@namespacecapital.com
         </a>
         <p class="inquiry-note">Qualified institutional, strategic, and acquisition inquiries only.</p>
       </div>
